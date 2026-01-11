@@ -79,7 +79,7 @@ def fetch_poster(movie_id):
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={TMDB_API_KEY}&language=en-US"
 
     try:
-        response = requests.get(url, timeout=5)
+        response = requests.get(url, timeout=1)
         response.raise_for_status()
         data = response.json()
 
